@@ -13,14 +13,4 @@
 	}
 	
 	print json_encode($rows);
-
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	curl_setopt($ch, CURLOPT_URL,"http://10.11.15.122/api-materials/emp.php?eid=$eid");
-	$result=curl_exec($ch);
-	curl_close($ch);
-	$DATA = json_decode($result, true);
-
-	$name     = $DATA['field1'] . ' ' . $DATA['field2'] . ' ' . $DATA['field3'];
  ?>
